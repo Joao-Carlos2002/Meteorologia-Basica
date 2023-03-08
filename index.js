@@ -17,8 +17,7 @@ function createElement(user) {
 }
 
 function main() {
-    let users = getUrl("https://api.hgbrasil.com/weather")
-    console.log(users)
+    console.log(getUrl("https://api.hgbrasil.com/weather"))
 }
 
 main();

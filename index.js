@@ -1,10 +1,24 @@
-const app = require('express')();
+function getUrl(url) {
+    let request = fetch(url)
+        .then((result) => {
+            result.json()
+        })
+        .then((data) => {
+            data.json()
+        })
+        .catch((err) => {
+            console.log(err)
+        });
+    return request;
+}
 
-app.listen(3000, () => console.log('Estou funcionando'))
+function createElement(user) {
 
-app.get('/api', (req, res) => {
-    res.send({
-        javascript: 20,
-        node: 10
-    })
-})
+}
+
+function main() {
+    let users = getUrl("https://api.hgbrasil.com/weather")
+    console.log(users)
+}
+
+main();

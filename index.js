@@ -7,7 +7,7 @@ function getUrl(url) {
             data.json()
         })
         .catch((err) => {
-            console.log(err)
+            console.log("Deu errado")
         });
     return request;
 }
@@ -17,7 +17,7 @@ function createElement(user) {
 }
 
 function main() {
-    console.log(getUrl("https://api.hgbrasil.com/weather"))
+    console.log(getUrl("https://api.hgbrasil.com/weather?key=870600af"))
 }
 
 main();
